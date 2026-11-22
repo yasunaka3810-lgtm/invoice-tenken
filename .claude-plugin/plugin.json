@@ -4,8 +4,11 @@
   "version": "0.1.1",
   "description": "Checks Japanese qualified invoices and receipts (インボイス・適格請求書・簡易インボイス): required items, registration number format, consumption tax per rate and rounding, and e-bookkeeping file names. Runs locally; nothing is sent anywhere.",
   "author": {
-    "name": "Yasuyoshi Nakamura"
+    "name": "Yasuyoshi Nakamura",
+    "url": "https://github.com/yasunaka3810-lgtm"
   },
+  "homepage": "https://github.com/yasunaka3810-lgtm/invoice-tenken",
+  "repository": "https://github.com/yasunaka3810-lgtm/invoice-tenken",
   "license": "MIT",
   "keywords": [
     "invoice",

@@ -1,0 +1,15 @@
+{
+  "name": "invoice-tenken",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Japanese invoice checker plugin for Claude (free edition).",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "4.6.7"
+  }
+}

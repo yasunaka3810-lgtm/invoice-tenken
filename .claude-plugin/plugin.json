@@ -9,6 +9,9 @@
   },
   "homepage": "https://github.com/yasunaka3810-lgtm/invoice-tenken/tree/directory",
   "repository": "https://github.com/yasunaka3810-lgtm/invoice-tenken",
+  "privacyPolicyUrl": "https://github.com/yasunaka3810-lgtm/invoice-tenken/blob/directory/PRIVACY.md",
+  "supportUrl": "https://github.com/yasunaka3810-lgtm/invoice-tenken/issues",
+  "documentationUrl": "https://github.com/yasunaka3810-lgtm/invoice-tenken/blob/directory/README.md",
   "license": "MIT",
   "keywords": [
     "invoice",

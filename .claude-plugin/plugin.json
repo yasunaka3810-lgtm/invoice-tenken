@@ -1,0 +1,21 @@
+{
+  "name": "invoice-tenken",
+  "displayName": "Invoice Tenken",
+  "version": "0.1.2",
+  "description": "Teaches Claude to check Japanese invoices and receipts (インボイス・適格請求書・領収書): required items, registration number, consumption tax per rate and rounding, and e-bookkeeping file names — with official sources for every finding.",
+  "author": {
+    "name": "Yasuyoshi Nakamura",
+    "url": "https://github.com/yasunaka3810-lgtm"
+  },
+  "homepage": "https://github.com/yasunaka3810-lgtm/invoice-tenken/tree/directory",
+  "repository": "https://github.com/yasunaka3810-lgtm/invoice-tenken",
+  "license": "MIT",
+  "keywords": [
+    "invoice",
+    "japan",
+    "consumption-tax",
+    "インボイス",
+    "適格請求書",
+    "電子帳簿保存法"
+  ]
+}

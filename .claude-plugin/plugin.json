@@ -1,7 +1,7 @@
 {
   "name": "invoice-tenken",
   "displayName": "Invoice Tenken",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Checks Japanese qualified invoices and receipts (インボイス・適格請求書・簡易インボイス): required items, registration number format, consumption tax per rate and rounding, and e-bookkeeping file names. Runs locally; nothing is sent anywhere.",
   "author": {
     "name": "Yasuyoshi Nakamura",

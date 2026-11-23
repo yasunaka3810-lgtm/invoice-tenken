@@ -35,7 +35,7 @@ Checks Japanese invoices and receipts against the qualified invoice system (適�
    - whether amounts are tax-excluded (税抜) or tax-included (税込) — `amount_basis`;
    - total tax and grand total as printed; tax printed on each line, if any;
    - for `return`: return date, date of the original sale, and the return amount including tax.
-4. **Run the checks with the tools.** The tools come from the MCP server `invoice-tenken`: in Claude Code the plugin, in the Claude app the extension "Invoice Tenken" / "Invoice Tenken Pro" (インボイス点検). Their names are `check_invoice_fields`, `check_tax`, `check_registration_number`, `suggest_filename` and, in Pro, `lookup_registration` and the file tools. **If these tools are available, always use them; never redo their work by hand.** Only when none of them is available, follow "Without the MCP server" below.
+4. **Run the checks with the tools** (if they are not available, see "Without the MCP server" below). The tools come from the MCP server `invoice-tenken`: in Claude Code the plugin, in the Claude app the extension "Invoice Tenken" / "Invoice Tenken Pro" (インボイス点検). Their names are `check_invoice_fields`, `check_tax`, `check_registration_number`, `suggest_filename` and, in Pro, `lookup_registration` and the file tools. **If these tools are available, always use them; never redo their work by hand.** Only when none of them is available, follow "Without the MCP server" below.
    - `check_invoice_fields` — required items (it also checks the registration number format).
    - `check_tax` — per-rate tax, rounding, line-by-line rounding, grand total.
    - `lookup_registration` (paid edition, needs `NTA_INVOICE_APP_ID`) — with the transaction date and the printed name, when the user wants to know whether the issuer was registered on that day. If it returns `not_configured`, tell the user how to obtain an ID (README) and that they can check manually at https://www.invoice-kohyo.nta.go.jp/ .
@@ -52,10 +52,7 @@ Checks Japanese invoices and receipts against the qualified invoice system (適�
 
 ## Without the MCP server
 
-If the `invoice-tenken` tools are not available, follow the same steps by hand using `references/rules.*.md`:
-- Registration number: "T" + 13 digits. For corporations the 13 digits are the corporate number, whose first digit is the check digit `9 − (Σ Pn×Qn mod 9)` over the other 12 digits (Pn: n-th digit counted from the right, Qn: 1 when n is odd, 2 when even).
-- Tax per rate: compute floor, half-up and ceiling of the formula above and see whether the printed tax equals one of them.
-Say that the check was done by hand.
+If the `invoice-tenken` tools are not available (for example in Claude chat, where tools that run on the computer are not started), do steps 1–3 and 5 as above, but instead of step 4 **open `references/manual-check.md` and work through every step in it**: registration number (A), required items (B), consumption tax (C) and, if asked, file names (D). It repeats exactly what the tools check, with the same error / warning / info levels. Do the arithmetic in code when you can run code. Say in the report that the check was done by hand.
 
 ## Not covered
 
